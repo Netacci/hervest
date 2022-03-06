@@ -8,7 +8,7 @@ const SideNav = () => {
   return (
     <>
       <div
-        className={` mb-10  lg:translate-x-0   sidenav top-0 shadow-md fixed h-full bg-white w-72 p-8 mt-4 overflow-y-scroll
+        className={` mb-10  lg:translate-x-0   sidenav top-0 shadow-md fixed h-full bg-white w-72 p-8 overflow-y-scroll
          ${isNavOpen ? 'translate-x-0' : '-translate-x-full'}
          ease-in-out duration-300   `}
       >

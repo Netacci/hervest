@@ -25,9 +25,10 @@ module.exports = {
       secondary: '#265859',
       white: '#ffffff',
       gray: '#828282',
-      grayBg: '##F2F1F3',
+      grayBg: '#F2F1F3',
 
       navHover: '#FDF6F8',
+      bgBody: '#FAFAFA',
       linebreak: 'rgba(33, 63, 125, 0.1)',
     },
   },
