@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { sideNavData } from '../data/sideNavData';
 import Logo from '../images/logo.svg';
+import { NavContext } from '../context/NavContext';
 
 const SideNav = () => {
-  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [isNavOpen, setIsNavOpen] = useContext(NavContext);
 
   return (
     <>
       <div
-        className={` mb-10  lg:translate-x-0   sidenav top-0 shadow-md fixed h-full bg-white w-72 p-8 overflow-y-scroll
+        className={` z-10 mb-10  lg:translate-x-0   sidenav top-0 shadow-md fixed h-full bg-white w-72 p-8 overflow-y-scroll
          ${isNavOpen ? 'translate-x-0' : '-translate-x-full'}
          ease-in-out duration-300   `}
       >

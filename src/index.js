@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { NavProvider } from './context/NavContext';
+
 ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path='*' element={<App />} />
-    </Routes>
-  </BrowserRouter>,
+  <NavProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path='*' element={<App />} />
+      </Routes>
+    </BrowserRouter>
+  </NavProvider>,
   document.getElementById('root')
 );
 
