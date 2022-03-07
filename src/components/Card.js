@@ -9,7 +9,7 @@ const Card = () => {
           <img src={Icon} alt='icon' />
           <p className='ml-5'>Saving for rainy days</p>
         </div>
-        <h3 className='font-bold text-3xl mt-3'>₦400,000</h3>
+        <h3 className='font-bold text-2xl md:text-3xl mt-3'>₦400,000</h3>
 
         <div className='h-2 w-full bg-grayBg mt-4'>
           <div className='bg-secondary w-5/12 h-2'></div>

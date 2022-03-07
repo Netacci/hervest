@@ -31,8 +31,8 @@ const User = () => {
         </div>
         <Dash />
         <div className='text-text mt-10 text-center lg:text-left'>
-          <h2 className=' font-bold text-4xl'>Watch your plans</h2>
-          <p className='text-xl font-light mt-3'>
+          <h2 className=' font-bold text-2xl md:text-4xl'>Watch your plans</h2>
+          <p className='text-base md:text-xl font-light mt-3'>
             A goal without a plan is just a wish
           </p>
         </div>
