@@ -8,6 +8,7 @@ import invest from '../images/invest.svg';
 import invite from '../images/invite.svg';
 import { Icon } from '@iconify/react';
 import { NavContext } from '../context/NavContext';
+import CardSlider from './Slider';
 
 const User = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext);
@@ -15,48 +16,46 @@ const User = () => {
     <>
       <div
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className='text-3xl absolute right-0 md:right-12 top-20 cursor-pointer lg:hidden'
+        className='text-3xl absolute right-10 md:right-20 top-20 cursor-pointer lg:hidden'
       >
         <Icon
           icon={isNavOpen ? 'ant-design:close-outlined' : 'bx:menu-alt-left'}
         />
       </div>
-      <div className='mt-10 container pt-5 text-center px-20 lg:px-0 lg:text-left lg:pl-80 mb-20  '>
+      <div className='mt-1  pt-5 text-center mx-auto px-6 md:px-20 lg:px-0 lg:text-left lg:pl-80 mb-20  '>
         <div className='flex items-center '>
           <img src={pic} alt='profile' className='w-20 rounded-xl' />
-          <p className='text-text text-xl pl-4'>
+          <p className='text-text text-left text-xl pl-4'>
             Hello, <br /> <span className='text-2xl font-bold'>Netacci</span>
           </p>
         </div>
         <Dash />
-        <div className='text-text mt-10'>
+        <div className='text-text mt-10 text-center lg:text-left'>
           <h2 className=' font-bold text-4xl'>Watch your plans</h2>
           <p className='text-xl font-light mt-3'>
             A goal without a plan is just a wish
           </p>
         </div>
-        <div className='flex flex-row'>
-          <Card />
-          <Card />
-          <Card />
+        <div>
+          <CardSlider />
         </div>
-        <div className='flex flex-row'>
+        <div className='flex flex-col lg:flex-row lg:flex-wrap xl:flex-nowrap lg:justify-center'>
           <LinkCard
             title='Create a savings plan'
             text='Earn upto 12%'
-            image={<img src={save} alt='icon' />}
+            image={<img src={save} alt='icon' className='row-span-2' />}
             classes='bg-primary text-white'
           />
           <LinkCard
             title='Invest in a Female Farmer'
             text='Get up to 25% returns per annum'
-            image={<img src={invest} alt='icon' />}
+            image={<img src={invest} alt='icon' className='row-span-2' />}
             classes='bg-secondary text-white'
           />
           <LinkCard
             title='Invite your gilrs to HerVest'
             text='Share your girl code'
-            image={<img src={invite} alt='icon' />}
+            image={<img src={invite} alt='icon' className='row-span-2' />}
             classes='bg-grayBg text-primary'
             classText='text-secondary'
             button={

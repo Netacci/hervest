@@ -14,13 +14,17 @@ const LinkCard = ({
   return (
     <>
       <div
-        className={`p-3 py-6 w-full  md:w-6/12  rounded-xl  shadow-md  dark:bg-gray-800 dark:border-gray-700  mt-5 mr-8 ${classes}`}
+        className={`grid linkcard p-3 py-6 w-full lg:w-5/12  xl:w-7/12  rounded-xl  shadow-md  dark:bg-gray-800 dark:border-gray-700  mt-10 mr-8 ${classes}`}
       >
-        <p className='font-bold '>{title}</p>
-        <div className='flex items-center '>
-          <p className={`ml-5 text-xs ${classText}`}>{text}</p>
-          {image}
-        </div>
+        <p className='font-bold col-start-1'>{title}</p>
+
+        <p
+          className={`text-xs row-start-2 lg:mt-3 xl:mt-0 self-start ${classText}`}
+        >
+          {text}
+        </p>
+        {image}
+
         <div>
           {' '}
           {button}

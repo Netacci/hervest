@@ -5,8 +5,14 @@
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
 
 body{
     background: #FAFAFA;
+}
+.linkcard{
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 1fr 1fr;
 }

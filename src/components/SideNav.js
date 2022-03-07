@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { sideNavData } from '../data/sideNavData';
 import Logo from '../images/logo.svg';
 import { NavContext } from '../context/NavContext';
 
+import { Link } from 'react-router-dom';
+
 const SideNav = () => {
   const [isNavOpen, setIsNavOpen] = useContext(NavContext);
+  const [active, setActive] = useState('Dashboard');
 
   return (
     <>
@@ -18,10 +21,22 @@ const SideNav = () => {
         <div className='mt-3'>
           {sideNavData.map((nav) => {
             return (
-              <div className='flex  text-sm text-text font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary pl-5'>
-                {nav.icon}
-                <p className=' p-5  '>{nav.title}</p>
-              </div>
+              <Link
+                to={nav.link}
+                key={nav.title}
+                onClick={() => setActive(nav.title)}
+              >
+                <div
+                  className={`flex  text-sm text-text font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5 ${
+                    active === nav.title
+                      ? 'text-primary bg-navHover rounded-xl '
+                      : ''
+                  } `}
+                >
+                  {nav.icon}
+                  <p className=' p-5  '>{nav.title}</p>
+                </div>
+              </Link>
             );
           })}
         </div>
