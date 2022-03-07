@@ -27,10 +27,10 @@ const SideNav = () => {
                 onClick={() => setActive(nav.title)}
               >
                 <div
-                  className={`flex  text-sm text-text font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5 ${
+                  className={`flex  text-sm  font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5 ${
                     active === nav.title
                       ? 'text-primary bg-navHover rounded-xl '
-                      : ''
+                      : 'text-text'
                   } `}
                 >
                   {nav.icon}
