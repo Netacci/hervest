@@ -14,7 +14,7 @@ const NotFound = () => {
           className='py-4 px-5 rounded mt-4 text-xl bg-primary text-white'
           onClick={() => navigate('/dashboard')}
         >
-          Return to Home
+          Return to Dashboard
         </button>
       </div>
     </>
