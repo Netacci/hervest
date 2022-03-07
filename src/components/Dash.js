@@ -29,9 +29,13 @@ const Dash = () => {
               key={acct.title}
               className='mt-3 mb-4 md:mb-0 md:mt-6 mr-3 xl:mr-0 lg:mt-4 xl:mt-0'
             >
-              <p className='font-light font-sm text-bgBody'>{acct.title}</p>
+              <p className='font-light font-sm text-sm md:text-base text-bgBody'>
+                {acct.title}
+              </p>
 
-              <p className='font-bold text-xl text-white'>{acct.num}</p>
+              <p className='font-bold text-base md:text-xl text-white'>
+                {acct.num}
+              </p>
             </div>
           );
         })}

@@ -25,8 +25,9 @@ const User = () => {
       <div className='mt-1  pt-5 text-center mx-auto px-6 md:px-20 lg:px-0 lg:text-left lg:pl-80 mb-20  '>
         <div className='flex items-center '>
           <img src={pic} alt='profile' className='w-20 rounded-xl' />
-          <p className='text-text text-left text-xl pl-4'>
-            Hello, <br /> <span className='text-2xl font-bold'>Netacci</span>
+          <p className='text-text text-left text-base md:text-xl pl-4'>
+            Hello, <br />{' '}
+            <span className='text-xl md:text-2xl font-bold'>Netacci</span>
           </p>
         </div>
         <Dash />
