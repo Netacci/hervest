@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import pic from '../images/picturee.png';
-import Card from './Card';
+
 import Dash from './Dash';
 import LinkCard from './LinkCard';
 import save from '../images/save-plan.svg';

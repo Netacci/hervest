@@ -6,7 +6,7 @@ import { NavContext } from '../context/NavContext';
 import { Link } from 'react-router-dom';
 
 const SideNav = () => {
-  const [isNavOpen, setIsNavOpen] = useContext(NavContext);
+  const [isNavOpen] = useContext(NavContext);
   const [active, setActive] = useState('Dashboard');
 
   return (
