@@ -7,7 +7,7 @@ import { balance } from '../data/balance';
 const Dash = () => {
   return (
     <>
-      <div className='flex flex-col md:flex-row md:flex-wrap  xl:flex-none w-full justify-around dark:bg-gray-800 dark:border-gray-700 mt-10 p-4 md:p-16 bg-primary rounded-xl  relative  shadow-md mx-auto '>
+      <div className='flex flex-col md:flex-row md:flex-wrap  xl:flex-none w-full justify-around dark:bg-gray-800 dark:border-gray-700 mt-10 p-4 md:p-16 bg-primary rounded-xl  relative  shadow-md mx-auto'>
         <img
           src={Up}
           alt='icon'
