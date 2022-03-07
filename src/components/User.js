@@ -53,13 +53,13 @@ const User = () => {
             classes='bg-secondary text-white'
           />
           <LinkCard
-            title='Invite your gilrs to HerVest'
+            title='Invite your girls to HerVest'
             text='Share your girl code'
             image={<img src={invite} alt='icon' className='row-span-2' />}
             classes='bg-grayBg text-primary'
             classText='text-secondary'
             button={
-              <button className='bg-primary text-white p-2 font-bold text-xl'>
+              <button className='bg-primary text-white p-2 font-bold text-xl rounded-lg'>
                 HG7IB
               </button>
             }

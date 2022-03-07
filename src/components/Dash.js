@@ -27,7 +27,7 @@ const Dash = () => {
           return (
             <div
               key={acct.title}
-              className='mt-5 md:mt-6 mr-3 xl:mr-0 lg:mt-4 xl:mt-0'
+              className='mt-3 mb-4 md:mb-0 md:mt-6 mr-3 xl:mr-0 lg:mt-4 xl:mt-0'
             >
               <p className='font-light font-sm text-bgBody'>{acct.title}</p>
 
