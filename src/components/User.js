@@ -16,7 +16,7 @@ const User = () => {
     <>
       <div
         onClick={() => setIsNavOpen(!isNavOpen)}
-        className='text-3xl absolute right-10 md:right-20 top-20 cursor-pointer lg:hidden'
+        className='text-3xl absolute right-10 md:right-20 top-12 cursor-pointer lg:hidden'
       >
         <Icon
           icon={isNavOpen ? 'ant-design:close-outlined' : 'bx:menu-alt-left'}
