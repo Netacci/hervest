@@ -1,13 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { sideNavData } from '../data/sideNavData';
 import Logo from '../images/logo.svg';
 import { NavContext } from '../context/NavContext';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SideNav = () => {
   const [isNavOpen] = useContext(NavContext);
-  const [active, setActive] = useState('Dashboard');
 
   return (
     <>
@@ -21,22 +20,18 @@ const SideNav = () => {
         <div className='mt-3'>
           {sideNavData.map((nav) => {
             return (
-              <Link
+              <NavLink
                 to={nav.link}
                 key={nav.title}
-                onClick={() => setActive(nav.title)}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'flex  text-sm  font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5 text-primary bg-navHover rounded-xl '
+                    : 'text-text bg-none flex  text-sm  font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5'
+                }
               >
-                <div
-                  className={`flex  text-sm  font-semibold  items-center  hover:rounded-xl hover:text-primary focus:bg-primary hover:bg-navHover transition-all duration-400 ease-in active:text-primary active:bg-navHover pl-5 ${
-                    active === nav.title
-                      ? 'text-primary bg-navHover rounded-xl '
-                      : 'text-text'
-                  } `}
-                >
-                  {nav.icon}
-                  <p className=' p-5  '>{nav.title}</p>
-                </div>
-              </Link>
+                {nav.icon}
+                <p className=' p-5  '>{nav.title}</p>
+              </NavLink>
             );
           })}
         </div>
